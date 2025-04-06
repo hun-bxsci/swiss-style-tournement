@@ -40,6 +40,10 @@ public class App extends Application {
         t.add(newT);
     }
     
+    public static void getTournement(){
+        
+    }
+    
     public static void main(String[] args) {
         launch();
     }

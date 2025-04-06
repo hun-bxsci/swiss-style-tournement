@@ -24,6 +24,7 @@ public class HomeController implements Initializable {
     }
     @FXML
     private void newGame() throws IOException{
+        App.newTournement();
         App.setRoot("secondary");
     }
 }

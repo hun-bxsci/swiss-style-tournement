@@ -17,9 +17,6 @@ public class SecondaryController implements Initializable{
     @FXML
     private void switchToPrimary() throws IOException {
         App.setRoot("primary");
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
-        PrimaryController primary = loader.getController();
-        primary.passer(curr, 1);
     }
     @FXML
     private void done() throws IOException{
