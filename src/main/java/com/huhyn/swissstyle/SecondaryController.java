@@ -10,13 +10,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 
 public class SecondaryController implements Initializable{
-//new tornement page
+//new tornement page --> addppl next page
     private Tornement curr;
     @FXML
     ComboBox<Integer> maxNum;
     @FXML
     private void switchToPrimary() throws IOException {
-        App.setRoot("primary");
+        App.setRoot("addPeople");
     }
     @FXML
     private void done() throws IOException{

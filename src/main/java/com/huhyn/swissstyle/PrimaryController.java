@@ -12,7 +12,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.layout.VBox;
 
 public class PrimaryController implements Initializable {
-//tornement page
+//tornement page --> home next page
     private Tornement curr;
     @FXML
     private void switchToSecondary() throws IOException {
@@ -26,7 +26,10 @@ public class PrimaryController implements Initializable {
     }
     @FXML ComboBox rounds;
     @FXML VBox games;
-    
+    @FXML 
+    private void swap() throws IOException{
+        
+    }
     public void passer(Tornement t, int i){
         curr=t;
         System.out.println(i);

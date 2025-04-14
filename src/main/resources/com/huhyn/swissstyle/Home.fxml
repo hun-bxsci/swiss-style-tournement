@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.huhyn.swissstyle.HomeController">
     <stylesheets>
@@ -16,9 +17,11 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="238.0" prefWidth="375.0">
                <children>
-                  <VBox prefHeight="200.0" prefWidth="362.0" />
+                  <VBox fx:id="List" prefHeight="200.0" prefWidth="362.0" />
                </children></AnchorPane>
         </content>
       </ScrollPane>
+      <Button layoutX="457.0" layoutY="110.0" mnemonicParsing="false" onAction="#existingTournemnt" text="View Game" />
+      <Text fx:id="wrongNumber" fill="#ff2222" layoutX="52.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" underline="true" wrappingWidth="282.13671875" />
    </children>
 </AnchorPane>
