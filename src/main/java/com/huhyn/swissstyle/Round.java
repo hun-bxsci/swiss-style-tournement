@@ -8,7 +8,7 @@ public class Round {
     Game[] game;
     boolean set = false;
     boolean done = false;
-    public Round(String[] testing){
+    public Round(){
         
     }
     public void swap(Game g1, Game g2){

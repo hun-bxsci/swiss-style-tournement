@@ -2,25 +2,84 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.huhyn.swissstyle.PrimaryController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Round" />
-      <ComboBox fx:id="rounds" prefWidth="150.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tournement Name">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Round" />
+            <ComboBox fx:id="rounds" prefWidth="150.0" style="-fx-background-color: #ebebeb;" />
+         </children>
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
       <ScrollPane prefHeight="250.0" prefWidth="818.0">
          <content>
-            <ListView prefHeight="302.0" prefWidth="803.0" />
+            <VBox prefHeight="430.0" prefWidth="799.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="799.0" spacing="30.0" style="-fx-background-color: #d3dfeb; -fx-border-radius: 2;">
+                     <children>
+                        <CheckBox mnemonicParsing="false" text="Player 1" />
+                        <CheckBox mnemonicParsing="false" text="Player 2" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Score: 9, -2, 7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Winner, Player 1" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="799.0" spacing="30.0" style="-fx-border-radius: 2;">
+                     <children>
+                        <CheckBox mnemonicParsing="false" text="Player 3" />
+                        <CheckBox mnemonicParsing="false" text="Player 4" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Score: 9, -2, 7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Winner, Player 3" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="42.0" prefWidth="799.0" spacing="30.0" style="-fx-background-color: #d3dfeb; -fx-border-radius: 2;">
+                     <children>
+                        <CheckBox mnemonicParsing="false" text="Player 5" />
+                        <CheckBox mnemonicParsing="false" text="Player 6" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Score: 9, -2, 7" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Winner, Player 4" />
+                     </children>
+                     <padding>
+                        <Insets left="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
          </content>
       </ScrollPane>
-      <Label text="Primary View" />
-      <Button fx:id="primaryButton" onAction="#switchToSecondary" text="Switch to Secondary View" />
-      <Button mnemonicParsing="false" onAction="#switchToHome" text="home" />
+      <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="200.0" spacing="10.0">
+         <padding>
+            <Insets left="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToHome" style="-fx-background-color: #ebebeb;" text="home" />
+            <Button fx:id="primaryButton" onAction="#switchToSecondary" style="-fx-background-color: #ebebeb;" text="save" />
+            <Button fx:id="primaryButton1" onAction="#switchToSecondary" style="-fx-background-color: #ebebeb;" text="swap" />
+         </children>
+      </HBox>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
