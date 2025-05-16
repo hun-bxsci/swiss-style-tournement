@@ -8,27 +8,34 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 public class SecondaryController implements Initializable{
-//new tornement page --> addppl next page
-    private Tornement curr;
+//new tournement page
     @FXML
-    ComboBox<Integer> maxNum;
+    TextField name;
     @FXML
-    private void switchToPrimary() throws IOException {
-        App.setRoot("addPeople");
-    }
+    TextArea des;
+    @FXML
+    Label incomplete;
     @FXML
     private void done() throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
-        PrimaryController primary = loader.getController();
-        switchToPrimary();
+        if (name.getText().isEmpty()){
+            incomplete.setVisible(true);
+        }
+        else{
+        //set in run time memory
+        App.setCurrName(name.getText());//temp
+        App.addTournement(name.getText());
+        App.setRoot("addPeople");
+        }
     }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        maxNum.getItems().clear();
-        maxNum.getItems().addAll(16,32,64);
-        curr = new Tornement();
+        App.newTournement();
     }    
 }

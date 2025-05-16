@@ -1,5 +1,7 @@
 package com.huhyn.swissstyle;
 
+import java.util.Comparator;
+
 /**
  *
  * @author nhyhu
@@ -7,12 +9,27 @@ package com.huhyn.swissstyle;
 public class Person {
     String name;
     String club;
-    int win = 0;
-    int lose = 0;
+    int win;
     int rating;
     public Person(String n, String c, int r){
         name = n;
         club = c;
         rating = r;
+        win =0;
+    }
+    public Person(String n, String c, int r, int w){
+        name = n;
+        club = c;
+        rating = r;
+        win =w;
+    }
+    public int rating(){
+        return rating;
+    }
+    public int wins(){
+        return win;
     }
 }
+
+
+

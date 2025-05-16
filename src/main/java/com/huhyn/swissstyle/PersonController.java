@@ -4,9 +4,14 @@
  */
 package com.huhyn.swissstyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -14,13 +19,22 @@ import javafx.fxml.Initializable;
  * @author nhyhu
  */
 public class PersonController implements Initializable {
-
+    @FXML Text players;
+    @FXML Text currScore;
+    @FXML TextField input;
+    @FXML Button done;
     /**
      * Initializes the controller class.
      */
+    @FXML 
+    private void done()throws IOException{
+        App.editing.score = App.editing.score+ input.getText();
+        App.setRoot("primary");
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        currScore.setText(App.editing.score);
+        players.setText(App.editing.one.name+" vs. "+ App.editing.two.name);
     }    
     
 }
